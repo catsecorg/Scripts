@@ -28,7 +28,7 @@ mkdir Wordlist
 
 echo installing tools
 sudo bash
-apt-get install aircrack-ng wireshark tshark nmap sqlmap john git steghide gobuster dirbuster exif vim bleachbit default-jdk ssh -y
+apt-get install aircrack-ng wireshark tshark nmap sqlmap john git steghide gobuster dirbuster exif vim bleachbit default-jdk ssh smbclient netcat hydra -y
 
 
 cd /home/catsec/Downloads 
@@ -76,15 +76,26 @@ echo installing LinPeas
 git clone https://github.com/carlospolop/privilege-escalation-awesome-scripts-suite.git
 mv privilege-escalation-awesome-scripts-suite/ LinPEAS
 
+#LinEnum
+echo installing LinEnum
+git clone https://github.com/rebootuser/LinEnum.git
+
 #Hunt Extension
 echo installing HUNT
 git clone https://github.com/bugcrowd/HUNT.git
+
+#Radare2
+git clone git clone https://github.com/radareorg/radare2
+cd radare2 ; sys/install.sh
+cd ..
 
 #The Harvester
 echo installing the harvester
 git clone https://github.com/laramies/theHarvester.git
 cd theHarvester
 python3 -m pip install -r requirements/dev.txt
+
+
 
 echo cleaning downloads
 cd /home/catsec/Downloads
