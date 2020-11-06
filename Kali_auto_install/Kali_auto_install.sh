@@ -28,7 +28,7 @@ mkdir Wordlist
 
 echo installing tools
 sudo bash
-apt-get install aircrack-ng wireshark tshark nmap sqlmap john git steghide gobuster dirbuster exif vim bleachbit default-jdk ssh smbclient netcat hydra -y
+apt-get install aircrack-ng wireshark tshark nmap sqlmap john git steghide gobuster dirbuster exif vim bleachbit default-jdk ssh smbclient netcat hydra ftp  libimage-exiftool-perl perl-doc  binutils -y
 
 
 cd /home/catsec/Downloads 
@@ -83,6 +83,11 @@ git clone https://github.com/rebootuser/LinEnum.git
 #Hunt Extension
 echo installing HUNT
 git clone https://github.com/bugcrowd/HUNT.git
+
+
+#Stegcracker
+echo installing Steagcracker
+git clone https://github.com/Paradoxis/StegCracker.git
 
 #Radare2
 git clone git clone https://github.com/radareorg/radare2
